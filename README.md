@@ -23,6 +23,8 @@ pyinstaller main.py，下列文件需要手工拷贝：
 3、pytorch_lightning库文件拷贝到dist\main\_internal（pyinstaller打包会漏掉这个Lib库）
 4、dist\main\_internal下新建images目录
 
+pyinstaller -F main.py --add-data "parseq-onekey.ckpt;." --add-data "config.ini;."
+
 ## 启动游戏
 正常启动游戏，建议将游戏窗口最大化。
 ## 启动脚本程序
